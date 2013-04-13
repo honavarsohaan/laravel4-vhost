@@ -43,10 +43,10 @@ class CreateVhostCommand extends Command {
 		$option = $this->ask("Do you want to create vhost [y/n] ?");
 		$option = strtolower($option);
 		if($option == 'y' || $option == 'yes'){
-			$this->comment('Great lets create vhost for you');
+			$this->line('Great lets create vhost for you');
 			$hostFile = 'C:\Windows\System32\drivers\etc\hosts';
 			if (file_exists($hostFile)) {
-				$this->comment("Your host found at $hostFile");
+				$this->line("Your host found at $hostFile");
 				$content = file_get_contents($hostFile);
 				$this->comment($content);
 				$hostMap = $this->ask('Write host map');
