@@ -4,13 +4,14 @@ Laravel 4 vhost generator
 
 This simple php script can be used to create vhost for your new Laravel4 App
 
-Download CreateVhostCommand.php and put it in app/commands
+Download CreateVhostCommand.php and ShowVhostCommand.php and put it in app/commands folder
 
 ## Installation
 
 To install update artisan.php in app/start/artisan.php with
       
       Artisan::add(new CreateVhostCommand);
+      Artisan::add(new ShowVhostCommand);
       
 ## Usage
 
@@ -49,6 +50,10 @@ You can overide this as follows
       >>path to your file
       
 Thats it your virtual host for you laravel 4 app is created just restart you apache server for changes to take affect
+
+To see your current host confugration file run following command cmd
+
+      php artisan vhost:show
 
 Currently this only works in Windows
 
